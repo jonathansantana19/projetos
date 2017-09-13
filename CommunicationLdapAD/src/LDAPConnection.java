@@ -14,12 +14,9 @@ public class LDAPConnection {
 	public InitialLdapContext ConnectionLDAP(String ldapServer, String ldapSearchBase) throws NamingException{
 	
 		final String ldapUsername = "Scripts";
-	    final String ldapPassword = "qtB>zp&78*";
+	    final String ldapPassword = "*****";
 	    
-	//    final String ldapAccountToLookup = "lourenco.wivian";
-//	    final String ldapAccountToLookup = "santana1.jonathan";
-	//    final String ldapAccountToLookup = "ferreira1.amanda";
-	//    final String ldapAccountToLookup = "marinho.joel";
+
 	    
 	    Hashtable<String, Object> env = new Hashtable<String, Object>();
 	    env.put(Context.SECURITY_AUTHENTICATION, "simple");
