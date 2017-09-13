@@ -19,7 +19,7 @@ public class App2 {
 		    props.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 		    props.put(Context.PROVIDER_URL, "LDAP://dc1.services.local");
 		    props.put(Context.SECURITY_PRINCIPAL, "Scripts");//adminuser - User with special priviledge, dn user
-		    props.put(Context.SECURITY_CREDENTIALS, "qtB>zp&78*");//dn user password
+		    props.put(Context.SECURITY_CREDENTIALS, "*****");//dn user password
 
 		    
 		    String username = "santana1.jonathan";
@@ -40,7 +40,7 @@ public class App2 {
 		        props.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 		        props.put(Context.PROVIDER_URL, "ldap://LDAPSERVER:PORT");
 		        props.put(Context.SECURITY_PRINCIPAL, "santana1.jonathan");
-		        props.put(Context.SECURITY_CREDENTIALS, "*F20j40i61!");
+		        props.put(Context.SECURITY_CREDENTIALS, "*****");
 
 		   context = new InitialDirContext(props);
 		    } catch (Exception e) {
