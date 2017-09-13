@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 
 public class ConectaBanco {
 
-	//INFORMAÇÕES DE CONEXAO
-	private static  String usuario = "importacao_app";
-	private static  String senha = "b3z0wr0";
+	//INFORMAÃ‡Ã•ES DE CONEXAO
+	private static  String usuario = "****";
+	private static  String senha = "****";
 	
-	private static  String database = "dba_gruposervices";
+	private static  String database = "******";
 	
 	
 	public static Connection getConectaBanco() {
