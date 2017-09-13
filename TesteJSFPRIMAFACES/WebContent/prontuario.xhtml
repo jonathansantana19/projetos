@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Insert title here</title>
+
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/estilo.css" rel="stylesheet" />
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+
+</h:head>
+<h:body>
+
+
+
+	<h:form id="form">
+
+		<p:panelGrid columns="3">
+
+
+			<p:outputLabel value="NOME" />
+			<p:inputText value="#{controller.cid.nome}" />
+			<p:commandButton value="Localizar"
+				onclick="$('#myModal').modal('show');" />
+
+			<p:outputLabel value="CID" />
+			<p:inputText value="#{controller.cid.codigo}" />
+			<p:outputLabel/>
+
+		</p:panelGrid>
+	</h:form>
+
+
+
+
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		aria-labelledby="myModal" aria-hidden="true" data-keyboard="true"
+		data-backdrop="static">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<h:form id="myForm">
+					<div class="modal-header">
+						<h4 class="modal-title text-center">Lista de CIDs</h4>
+					</div>
+					<div class="modal-body">
+						Content area
+						
+					<div class="table-responsive">
+						<p:dataTable var="l" value="#{controller.lista}"  tableStyleClass="table table-striped"
+						paginator="true" rows="10" resizableColumns="true" paginatorPosition="bottom"
+							widgetVar="tableCID" id="tableCID"  selectionMode="single"  rowKey="#{l.codigo}"
+							emptyMessage="Nenhum CID encontrado"
+							filteredValue="#{controller.filtro}">
+
+							<f:facet name="header">
+								<p:outputPanel>
+									<h:outputText value="Localizar:" />
+									<p:inputText id="globalFilter"
+										onkeyup="PF('tableCID').filter()" style="width:150px"
+										placeholder="Enter keyword" />
+								</p:outputPanel>
+							</f:facet>
+
+							<p:column filterBy="#{l.codigo}" headerText="Codigo"
+								filterMatchMode="contains">
+								<h:outputText value="#{l.codigo}" />
+							</p:column>
+
+
+							<p:column filterBy="#{l.nome}" headerText="Nome"
+								filterMatchMode="contains">
+								<h:outputText value="#{l.nome}" />
+							</p:column>
+
+
+							<p:column>
+								<p:commandButton value="Selecionar" styleClass="btn btn-primary" ajax="false"
+									  action="#{controller.ExcluirMetodo(l)}" update="form" />
+							</p:column>
+						</p:dataTable>
+					 </div>	
+					</div>
+				
+					<div class="modal-footer text-center">
+							<p:commandButton value="Sair" styleClass="btn btn-default text-center" 
+										 onclick="$('#myModal').modal('hide');"  />
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</div>
+
+
+<style type="text/css">
+	
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td {
+/*     border-style: none; */
+}
+
+.ui-datatable thead th, .ui-datatable tbody td, .ui-datatable tfoot td {
+/*     border-style: none; */
+}
+</style>
+
+
+</h:body>
+</html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+</h:head>
+<h:body>
+
+<!-- <div id="navbar" class="navbar-collapse collapse"> -->
+	<p:menubar styleClass="navbar-collapse collapse">
+    <p:submenu label="Home" styleClass="nav navbar-nav" >
+        <p:menuitem value="Inicio"  update="messages" icon="ui-icon-home" url="portal.jsf"/>
+    </p:submenu>
+    
+         <p:submenu label="Recepção"  >
+       	<p:menuitem value="Marcar Consulta"  update="messages" ajax="false" icon="ui-icon-tag" url="marcaragendamento.jsf" />
+ 	        	<p:menuitem value="Marcar Exame"  update="messages" ajax="false" icon="ui-icon-tag" url="marcaragendamentoexame.jsf"/>
+ 	        	 
+    <p:submenu label="Agenda">
+		  <p:menuitem value="Agenda Consultas"  update="messages" ajax="false" icon="ui-icon-clock" url="agenda.jsf" />
+         				 
+         		 <p:menuitem value="Agenda Exames"  update="messages" ajax="false" icon="ui-icon-clock" url="agendaexames.jsf" />		 
+	</p:submenu>			      		  
+          <p:menuitem value="Clientes" icon="ui-icon-contact" url="clientesV2.jsf"/>
+          
+          <p:submenu label="Exames">
+          	<p:menuitem value="Orcamento Exames" url="orcamento.jsf" />
+          	<p:menuitem value="Exames" url="cadastroexames.jsf" />
+          	<p:menuitem value="Grupo Exames" url="cadastrogrupoexames.jsf"/>
+          </p:submenu>
+          
+           <p:submenu label="Caixa" >
+      		<p:menuitem  value="Caixa"  url="caixa.jsf" icon="ui-icon-locked" />
+     		 </p:submenu>
+     		 
+     		 <p:submenu label="Relatórios" >
+      		<p:menuitem  value="Relatórios"  url="relatorios.jsf" icon="ui-icon-locked" />
+     		 </p:submenu>
+          
+      </p:submenu> 
+	
+</p:menubar>	
+<!-- </div> -->
+
+
+</h:body>
+</html>

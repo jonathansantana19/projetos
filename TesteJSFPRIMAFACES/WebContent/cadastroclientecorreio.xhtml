@@ -1,0 +1,194 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/estilo.css" rel="stylesheet" />
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+</h:head>
+<h:body>
+
+ <div class="col-md-12">
+<h:form  styleClass="form-horizontal">
+
+
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">CEP</label>
+	<div class="input-group col-sm-6">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.cep}"   maxlength="50" styleClass="form-control"  id="campo-cep"
+		placeholder="CEP" required="true"  requiredMessage="Campo CEP é um campo onrigatório"/>
+		<p:commandButton value="Search" />
+	</div>
+</div>
+
+
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">Endereço</label>
+	<div class="input-group col-sm-6">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.endereco}"   maxlength="50" styleClass="form-control" id="campo-endereco"
+		placeholder="Endereço" required="true"  requiredMessage="Campo endereço é um campo onrigatório"/>
+		
+	<div class="col-sm-6">
+		<p:commandButton value="Search" onclick="$('#myModal').modal('show');"  update="myForm" />
+	</div>	
+	</div>
+</div>
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">Numero</label>
+	<div class="input-group col-sm-6">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.numero}"   maxlength="50" styleClass="form-control" 
+		placeholder="numero" required="true"  requiredMessage="Campo numero é um campo onrigatório"/>
+	</div>
+</div>
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">Complemento</label>
+	<div class="input-group col-sm-6">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.complemento}"   maxlength="50" styleClass="form-control" 
+		placeholder="Complemento" required="true"  requiredMessage="Campo complemento é um campo onrigatório"/>
+	</div>
+</div>
+
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">Bairro</label>
+	<div class="input-group col-sm-10">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.bairro}"   maxlength="50" styleClass="form-control"  id="campo-bairro"
+		placeholder="Bairro" required="true"  requiredMessage="Campo bairro é um campo onrigatório"/>
+	</div>
+</div>
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">Cidade</label>
+	<div class="input-group col-sm-10">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.cidade}"   maxlength="50" styleClass="form-control" id="campo-cidade"
+		placeholder="cidade" required="true"  requiredMessage="Campo cidade é um campo onrigatório"/>
+	</div>
+</div>
+
+<div class="form-group ">
+	<label  class="col-sm-2 control-label">Estado</label>
+	<div class="input-group col-sm-10">
+		<div class="input-group-addon">
+			<i class="glyphicon glyphicon-user"> </i>
+		</div>
+		<p:inputText value="#{correioMB.paciente.uf}"   maxlength="50" styleClass="form-control"  id="campo-estado"
+		placeholder="estado" required="true"  requiredMessage="Campo estadi é um campo onrigatório"/>
+	</div>
+</div>
+
+</h:form>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		aria-labelledby="myModal" aria-hidden="true" data-keyboard="true"
+		data-backdrop="static">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<h:form id="myForm">
+					<div class="modal-header">
+						<h4 class="modal-title text-center">Busca CEP - Endereço</h4>
+					</div>
+					<div class="modal-body">
+
+					<p:outputPanel>
+							<h:outputText value="Localizar:" />
+							<p:inputText
+								placeholder="Informe Endereço" value="#{correioMB.enderecoBusca}" />
+							
+								<p:inputText 
+								placeholder="Informe a cidade"  value="#{correioMB.cidadeBusca}" />	
+								
+									<p:inputText 
+								placeholder="Informe a estado"  value="#{correioMB.ufBusca}" />	
+								
+							<p:commandButton actionListener="#{correioMB.ListaEndereco}"  update="tableCID"/>		
+								
+						</p:outputPanel>
+						
+					<div class="table-responsive">
+						<p:dataTable var="l" value="#{correioMB.listaEndereco}"  tableStyleClass="table table-striped"
+						paginator="true" rows="10" resizableColumns="true" paginatorPosition="bottom" scrollable="true" scrollHeight="350"
+							style="margin-bottom:20px;"
+							widgetVar="tableCID" id="tableCID"  selectionMode="single"  rowKey="#{l.cep}"
+							emptyMessage="Nenhum dado encontrado" >
+
+							
+							<p:column headerText="CEP">
+								<h:outputText value="#{l.cep}" />
+							</p:column>
+							
+							
+							<p:column headerText="Logadouro" >
+								<h:outputText value="#{l.endereco} - #{l.complemento}" />
+							</p:column>
+
+
+							<p:column headerText="Bairro">
+								<h:outputText value="#{l.bairro}" />
+							</p:column>
+							
+							<p:column  headerText="Localidade">
+								<h:outputText value="#{l.cidade}" />
+							</p:column>
+							
+							<p:column  headerText="UF">
+								<h:outputText value="#{l.uf}" />
+							</p:column>
+
+
+							<p:column headerText="#">
+								<p:commandButton value="V" styleClass="btn btn-primary" ajax="false"
+									  action="#{correioMB.SelecionarMetodo(l)}" update="@myForm campo-estado campo-cidade campo-bairro 
+								 	  campo-endereco campo-cep" process="@form"  
+								 	  oncomplete="$('#myModal').modal('hide');" />
+									  
+							</p:column>
+						</p:dataTable>
+					 </div>	
+					</div>
+				
+					<div class="modal-footer text-center">
+							<p:commandButton value="Sair" styleClass="btn btn-default text-center" 
+										 onclick="$('#myModal').modal('hide');"  />
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+</div>
+</h:body>
+</html>

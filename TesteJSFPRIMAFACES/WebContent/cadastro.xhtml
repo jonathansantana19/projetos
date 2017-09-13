@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Insert title here</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/estilo.css" rel="stylesheet" />
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+</h:head>
+<h:body>
+
+
+<h:form id="form2">
+
+
+
+<div class="row">
+	<div class="col-md-1">
+		<p:outputLabel value="NOME" styleClass="control-label" />
+	</div>
+	<div class="col-md-6">
+		<p:autoComplete style="width:100%" inputStyle="width: 100%"   emptyMessage="Não Encontrado"   />
+	</div>
+	<div class="col-md-4">
+		<p:commandButton value="Localizar"  styleClass="btn btn-warning"
+				onclick="$('#myModal').modal('show');" />
+	</div>
+
+
+</div>
+
+
+
+
+<p:panelGrid columns="3">
+
+
+
+
+	<p:outputLabel value="NOME" />
+			<p:inputText  />
+			<p:commandButton value="Localizar"  styleClass="btn btn-warning" update="myForm"
+				onclick="$('#myModal').modal('show');" >
+					<p:resetInput target="myForm" />
+				</p:commandButton>
+
+</p:panelGrid>
+
+
+</h:form>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		aria-labelledby="myModal" aria-hidden="true" data-keyboard="true"
+		data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<h:form id="myForm">
+					<div class="modal-header">
+						<h4 class="modal-title text-center">Cadastro Rapido de Paciente</h4>
+					</div>
+					<div class="modal-body">
+						
+						<p:messages id="mensagem"   closable="true"   />
+						
+							
+						<div class="form-group">
+				            <label for="recipient-name" class="form-control-label">Nome:</label>
+				            <h:inputText value="#{controllerCadastro.nome}" styleClass="form-control" required="true"
+				            	requiredMessage="Campo Nome é um campo obrigatório"/>
+				          </div>
+				          <div class="form-group">
+				            <label for="message-text" class="form-control-label">Telefone:</label>
+				           	<h:inputText styleClass="form-control"  required="true"
+				           	requiredMessage="Campo Telefone é um campo obrigatório"/>
+				          </div>
+				           <div class="form-group">
+				            <label for="message-text" class="form-control-label">Sexo:</label>
+				            	<h:inputText styleClass="form-control" required="true"  requiredMessage="Campo Sexo é um campo obrigatório"  />
+				          </div>
+					</div>	<br/>
+				
+					<div class="modal-footer text-center">
+						  <div class="row">
+						      <div class="col-md-4" >
+						      	<p:commandButton actionListener="#{controllerCadastro.AdicionaContato}"  styleClass="btn btn-primary"
+									value="Salvar2" update="@form"  process="@form"  />
+						    	</div>
+						    	<div class="col-md-2" >
+						      		   <p:commandButton value="Sair" styleClass="btn btn-default" oncomplete="$('#myModal').modal('hide');" 
+						      		  />
+						    	</div>
+						   </div> 
+					</div>
+						
+				</h:form>
+			</div>
+		</div>
+	</div>
+
+</h:body>
+</html>

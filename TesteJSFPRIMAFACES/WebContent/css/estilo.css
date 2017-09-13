@@ -1,0 +1,549 @@
+@CHARSET "UTF-8";
+
+
+
+.divCabecalho {
+	padding-bottom: 1px;
+	height:145px;
+}
+
+.imagemCentralizada {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+/* 	top:50%; */
+	left:30%;
+margin-top:120px;
+/* 	margin-left:-50px; */
+}
+
+.divGeral{
+	min-height:100%;
+   position:relative;
+}
+
+.divPagina{
+
+/*  background-color: #ffffff; */
+ height:100%;
+ margin: 0 auto;
+ position: relative;
+}
+
+
+
+
+
+.divMenuLateral {
+ display: inline;
+ width: 10%;
+ float: left;
+}
+
+.divConteudo {
+ display: inline;
+ width: 90%;
+  padding-left: 5%;
+ padding-right: 5%;
+  float: right;
+ }
+
+
+.divRodape{
+  position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Mesma Altura do Rodapé */
+   background:#6cf
+}
+
+
+
+
+.menuFont{
+	 font-size: 0.9em;
+	 height:100px;
+}
+
+@media screen and (min-width : 700px) and (max-width : 1280px){
+    .verticalmenu{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width : 700px){
+    .horizontalmenu{
+        display: none !important;
+    }
+}
+
+
+
+/* CSS ICONES */
+/* Componentes */
+
+
+
+/* Datepicker */
+.ui-datepicker {
+	border: 1px solid #777777;
+	font-size: 12px !important;
+	padding: 0px;
+	border-top: none;
+}
+
+.ui-datepicker .ui-datepicker-header {
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-azul.png") !important;
+	color: #FFFFFF;
+}
+
+.ui-datepicker-prev .ui-icon-circle-triangle-w,
+.ui-datepicker-next .ui-icon-circle-triangle-e  {
+	width: 16px; 
+ 	height: 16px; 
+ 	background-image: url("../css/imagensicones.png"); 
+}
+
+.ui-datepicker table {
+	border-collapse: collapse;
+	font-size: 0.9em;
+	width: 100%;
+	margin: 0px;
+}
+
+.ui-datepicker th {
+	border-bottom: 1px solid #777777;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	color: #444444;
+	background-color: #CCCCCC;
+}
+
+.ui-datepicker td {
+	padding: 0px;
+}
+
+.ui-datepicker td span {
+	display: block;
+	padding: 0.2em;
+	text-align: right;
+	text-decoration: none;
+	color: #444444 !important;
+}
+
+.ui-datepicker .ui-state-default {
+	color: #005279 !important;
+}
+
+.ui-datepicker .ui-datepicker-week-end{
+	background-color: #CCCCCC !important;
+}
+
+.ui-datepicker .ui-state-default:hover {
+	color: #FFFFFF !important;
+	background: #F76E07 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png") !important;
+}
+
+.ui-datepicker .ui-state-active {
+	color: #FFFFFF !important;
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-azul.png") !important;
+}
+
+.ui-icon-calendar { 
+ 	width: 16px; 
+ 	height: 16px; 
+ 	background-image: url("../css/imagensicones.png") !important; 
+} 
+
+.ui-datepicker-trigger {
+	position: relative;
+	margin-left: -2px;
+	height: 26px !important;
+	border: 1px solid #777777 !important;
+}
+
+.ui-datepicker-trigger {
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-azul.png") !important;
+}
+
+.ui-datepicker-trigger:hover {
+	background: #F76E07 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png") !important;
+}
+
+/* Checkbox */
+
+.ui-chkbox .ui-c {
+	display: inline-block;
+	position: relative;
+	top: -1px;
+}
+
+.ui-chkbox .ui-state-active{
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png") !important;
+	position: relative;
+	top: -1px !important; 
+	height: 16px !important;
+	line-height: 16px;
+	margin-left: -3px;
+	display: inline-block;
+	margin-bottom: -2px !important;
+}
+
+.ui-chkbox .ui-state-active .ui-c {
+	margin-top: 0px;
+	margin-bottom: -4px !important;
+}
+
+.ui-chkbox .ui-state-hover{
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-azul.png") !important;
+}
+
+.ui-chkbox .ui-state-default {
+	position: relative;
+	top: -1px; 
+	height: 18px !important;
+	margin-left: -3px;
+	display: inline-block;
+	padding: 0px;
+	margin-bottom: -2px;
+	border: 1px solid #777777;
+}
+
+.ui-icon-check {
+	margin-top: 1px;
+}
+
+
+/* Data table */
+/* .ui-datatable { */
+/* 	width: 100%; */
+/* } */
+
+/* .ui-datatable table th {	 */
+/* 	text-transform: uppercase; */
+/* 	color: #FFFFFF !important; */
+/* 	border: 1px solid #777777 !important; */
+/* 	background: #005279 50% 50% repeat-x url("../css/imagensfundo-azul.png") !important; */
+/* } */
+
+/* .ui-datatable .ui-sortable-column:hover { */
+/* 	background: #F76E07 50% 50% repeat-x url("../css/imagensfundo-laranja-escuro.png") !important; */
+/* } */
+
+/* .ui-datatable label { */
+/* 	font-weight: bold !important; */
+/* } */
+
+/* .ui-datatable .ui-datatable-data td { */
+/* 	border: 1px solid #777777; */
+/* } */
+
+/* .ui-datatable-odd { */
+/* 	background: #FFFFFF; */
+/* } */
+
+/* .ui-datatable-even { */
+/* 	background: #DDDDDD; */
+/* } */
+
+/* .ui-datatable-odd:hover, */
+/* .ui-datatable-even:hover { */
+/* 	background: #F76E07 50% 50% repeat-x url("../css/imagensfundo-prateado.png"); */
+/* 	color: #FFFFFF; */
+/* } */
+
+/* .ui-datatable .ui-sortable-column-icon { */
+/* 	float: left; */
+/* 	position: relative; */
+/* 	top: 3px; */
+/* 	width: 16px;  */
+/*  	height: 16px;  */
+/*  	background-image: url("../css/imagensicones.png");  */
+/* } */
+
+/* Button */
+.botoes  {
+	text-align: center;	
+	height: 20px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+
+.botoes .ui-button {
+	border: 1px solid #777777;
+	color: #FFFFFF !important;
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 5px;
+	position: relative;
+	top: -9px;
+	height: 25px;
+	background: #F76E07 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png") !important;
+}
+
+.botoes .ui-button-text { 
+	line-height: 15px !important;
+	font-weight: bold;
+}
+
+.botoes .ui-button:hover {
+	background: #F76E07 50% 50% repeat-x url("../css/imagensfundo-laranja-escuro.png") !important;
+}
+
+/* Outros */
+.quantidade-tabela {
+	margin-top: 5px;
+	margin-bottom: 3px;
+	width: 100%;
+	float: left;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.centralizado {
+	text-align: center;
+}
+
+/* icones */
+.icone {
+	float: left;
+	border: 1px solid #777777;
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png");
+	margin-top: 5px;
+	width: 18px;
+	height: 18px;
+}
+
+.icone-tabela {
+	float: left;
+	border: 1px solid #777777;
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png");
+	margin-left: 2px;
+	margin-right: 2px;
+	width: 18px;
+	height: 18px;
+}
+
+.icone-tabela-unico {
+	float: left;
+	border: 1px solid #777777;
+	background: #005279 50% 50% repeat-x
+		url("../css/imagensfundo-laranja-claro.png");
+	margin-left: 30%;
+	margin-right: 30%;
+	width: 18px;
+	height: 18px;
+}
+
+.icone-busca {
+	border: 1px solid #777777;
+	border-left: none;
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-azul.png");
+	float: right;
+	margin-right: 229px;
+	width: 24px;
+	height: 24px;
+}
+
+.icone:hover,
+.icone-tabela:hover {
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-laranja-escuro.png");
+}
+
+.icone-busca:hover {
+	background: #005279 50% 50% repeat-x url("../css/imagensfundo-laranja-claro.png");
+}
+
+.adicionar {
+	background-image: url("../css/imagensicone-adicionar.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.remover {
+	background-image: url("../css/imagensicone-remover.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.iconeReabrir {
+	background-image: url("../css/imagensicones.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50px 50px;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.alterar {
+	background-image: url("../css/imagensicone-alterar.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.aprovar {
+	background-image: url("../css/imagensicone-aprovar.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.visualizar {
+	background-image: url("../css/imagensicone-visualizar.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	float: left;
+	width: 10px;
+	height: 10px;
+	margin-top: 4px;
+	margin-left: 4px;
+}
+
+.buscar {
+	background-image: url("../css/imagensicone-visualizar.png") !important;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin-top: 7px;
+	margin-left: 7px;
+}
+
+/* Mensagens */
+.ui-messages {
+	font-size: 12px !important;
+	padding: 0px;
+	margin: 0px;
+}
+
+.ui-messages-warn {
+	border: 1px solid #CF8817;
+	color: #CF8817;
+}
+
+.ui-messages-warn-icon {
+	background-image: url("../css/imagensicone-alerta.png") !important;
+	background-position: center center !important;
+	position: relative;
+	top: -1px;
+}
+
+.ui-messages-error {
+	border: 1px solid #DA2400;
+	color: #DA2400;
+}
+
+.ui-messages-error-icon {
+	background-image: url("../css/imagensicone-erro.png") !important;
+	background-position: center center !important;
+	position: relative;
+	top: -1px;
+}
+
+.ui-messages-info {
+	border: 1px solid #005C00;
+	color: #005C00;
+	background-color: #C8EAD6;
+}
+
+.ui-messages-info-icon {
+	background-image: url("../css/imagensicone-sucesso.png") !important;
+	background-position: center center !important;
+	position: relative;
+	top: -1px;
+}
+
+/* Dialog */
+
+
+.ui-dialog-titlebar {
+	background: #005279;
+	color: #FFFFFF;
+}
+
+.ui-dialog-title {
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+
+.ui-icon-closethick {
+ 	background-image: url("../css/imagensicones.png") !important; 
+ 	background-color: transparent; 	
+}
+
+.ui-dialog-titlebar a:hover {
+	background: none !important;
+	border: none !important;
+}
+
+.ui-dialog-content {
+	overflow: auto !important;
+	background-color: #EEEEEE !important;
+}
+
+
+/* DataList*/
+.ui-datalist-content {
+	border: 0px !important;
+	background: none !important;
+}
+
+.ui-datalist-content:hover {
+	color: #FFFFFF !important;
+}
+
+.ui-datalist-data {
+	border: 0px !important;
+}
+
+
+/* Cadeado */
+.icone-cadeado {
+	background-image: url("../css/imagensicone-cadeado.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	height: 128px;
+	width: 127px;
+	margin: auto;
+	margin-top: 15%;
+}
+
+.texto-cadeado {
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+
+/* Overlay */
+.ui-overlaypanel {
+	border: 1px solid #CCCCCC;
+	position: static !important;
+	background-color: #FFF2CC;
+}
+
+
+

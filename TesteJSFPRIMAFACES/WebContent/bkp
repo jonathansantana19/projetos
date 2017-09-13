@@ -1,0 +1,47 @@
+<div class="container">
+
+	<div class="row"> 
+		 <div class="col-md-12 ">
+		 	<label class="text-center" style="font-size:90px;" >Fazenda Rio Grande</label>
+		 </div>
+	</div>
+	
+	
+	 <div class="row"> 
+	  <div class="col-md-2">
+			  	<label style="font-size:90px;" > MIN 15°</label>
+		</div>
+		
+	     <div class="col-md-4">
+			  	<img src="images/unnamed.png" height="500" width="600" 
+			  	 class="img-responsive" alt="Imagem Responsiva" />
+		</div>
+		<div class="col-md-2">
+			  	<label style="font-size:90px;"  > MAX 25°</label>
+		</div>
+	 </div> 
+	 
+	 <div class="row"> 
+		 <div class="col-md-12 ">
+		 	<label class="text-center" style="font-size:90px;" >Previsão de Chuva</label>
+		 </div>
+	</div>
+	
+	
+</div>
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<p:commandButton value="Hide" onclick="PF('bar').hide()" type="button" icon="ui-icon-arrow-1-s"></p:commandButton>
+ 
+<p:commandButton value="Show" onclick="PF('bar').show()" type="button" icon="ui-icon-arrow-1-s"></p:commandButton>
+
+<p:notificationBar position="top" effect="slide" styleClass="top" widgetVar="bar">
+    <h:outputText value="Chamando" style="font-size:60px;" />
+</p:notificationBar>
+
+
+
+<p:clock pattern="HH:mm:ss dd.MM.yyyy"  />

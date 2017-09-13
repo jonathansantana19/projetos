@@ -1,0 +1,123 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Pagamento</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/estilo.css" rel="stylesheet" />
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/validator.js"></script>
+	<script src="js/definicao.js"></script>
+	<script src="js/teste.js"></script>
+	
+</h:head>
+<h:body>
+
+<script>
+  function demo_callback_function($el, value, callback) {
+    callback({
+      value: value,
+//       valid: /a.*z/.test(value),
+      message: "Must start with 'a' and end with 'z'"
+    });
+  }
+</script>
+
+<p:dataTable var="car" value="#{controllerPagamento.lista}">
+    <p:column headerText="Id">
+        <h:outputText value="2" />
+    </p:column>
+ 
+    <p:column headerText="Year">
+        <h:outputText value="2" />
+    </p:column>
+ 
+    <p:column headerText="Brand">
+        <h:outputText value="aaa" />
+    </p:column>
+ 
+    <p:column headerText="Color">
+        <h:outputText value="aa" />
+    </p:column>
+     <p:column headerText="Color">
+        <p:commandButton value="Pagamento" oncomplete="$('#myModal').modal('show');" 
+        styleClass="btn btn-default" icon="fa fa-fw fa-money">
+        	
+        </p:commandButton>
+    </p:column>
+</p:dataTable>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+		aria-labelledby="myModal" aria-hidden="true" data-keyboard="true"
+		data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content" >
+				<h:form id="myForm">
+					<div class="modal-header">
+						<h4 class="modal-title text-center">Pagamento2</h4>
+					</div>
+					<div class="modal-body">
+						
+						<p:messages id="mensagem"   closable="true"   />
+						
+							
+						<div class="form-group">
+				            <label for="recipient-name" class="form-control-label">SubTotal:</label>
+				            <h:inputText value="#{controllerPagamento.total}" styleClass="form-control" required="true"
+				            	requiredMessage="Campo Nome é um campo obrigatório"  >
+				            	<p:ajax event="blur"  listener="#{controllerPagamento.CalculaTotal}" />	
+				            </h:inputText>
+				          </div>
+				          <div class="form-group">
+				            <label for="message-text" class="form-control-label">Pagamento:</label>
+				           	<h:inputText styleClass="form-control"  required="true"  value="#{controllerPagamento.valorPago}" id="campoPagamento"
+				           		data-match="#inputPassword" data-match-error="Whoops, these don't match" placeholder="Confirm" >
+				           		<p:ajax event="blur"  listener="#{controllerPagamento.CalculaTotal}" update="campoTroco" />
+				           	</h:inputText>
+				          </div>
+				           <div class="form-group">
+				            <label for="message-text" class="form-control-label">Troco:</label>
+				            	<h:inputText  id="campoTroco" styleClass="form-control" required="true"  value="#{controllerPagamento.troco}"
+				            		 data-bv-callback="true"
+                data-bv-callback-message="Wrong answer"
+                data-bv-callback-callback="specialValidation" >
+				            		<div  id="mensagem" class="help-block with-errors"></div>
+				            	</h:inputText>
+				          </div>
+				          <div class="form-group">
+						    <label for="inputPassword" class="control-label">Senha</label>
+						  <input type="password" class="form-control" id="inputConfirm" placeholder="Confirme sua Senha..." 
+						      data-match="#inputPassword" data-match-error="Atenção! As senhas não estão iguais." />
+						    <div class="help-block with-errors"> </div>
+						   </div> 
+					</div>	<br/>
+				
+					<div class="modal-footer text-center">
+						  <div class="row">
+						      <div class="col-md-4" >
+						      	<p:commandButton actionListener="#{controllerCadastro.AdicionaContato}"  styleClass="btn btn-primary"
+									value="Salvar" update="@form"  process="@form"  />
+						    	</div>
+						    	<div class="col-md-2" >
+						      		   <p:commandButton value="Sair" styleClass="btn btn-default" oncomplete="$('#myModal').modal('hide');" 
+						      		  />
+						    	</div>
+						   </div> 
+					</div>
+						
+				</h:form>
+			</div>
+		</div>
+	</div>
+
+
+
+</h:body>
+</html>
