@@ -16,7 +16,7 @@ public class App3 {
 		Usuario usuario = new Usuario();
         
         String ldapAccountToLookup = "santana1.jonathan";
-        String password = "*F20j40i61!";
+        String password = "******";
         
 //        usuario = ldapAutenticacao.AutenticacaoUser(ldapAccountToLookup);
         
@@ -47,10 +47,10 @@ public class App3 {
            
            
         }catch (AuthenticationException authEx){
-	        System.out.println("Erro na autenticaÁ„o! ");
+	        System.out.println("Erro na autentica√ß√£o! ");
 	        authEx.printStackTrace();
         }catch (NamingException namEx){
-        System.out.println("Problemas na conex„o! ");
+        System.out.println("Problemas na conex√£o! ");
         //namEx.getCause().printStackTrace();
         }
         
