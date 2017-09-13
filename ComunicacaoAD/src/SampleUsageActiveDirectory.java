@@ -54,25 +54,14 @@ public class SampleUsageActiveDirectory {
 		String choice = "";
 		String searchTerm = "";
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-//		System.out.println("Provide username & password for connecting AD");
-//		System.out.println("Enter Domain:");			
-//		domain = br.readLine();
-//		System.out.println("Enter username:");			
-//		username = br.readLine();			
-//		System.out.println("Enter password:");
-//		password = br.readLine();
-//		System.out.println("Search by username or email:");
-//		choice = br.readLine();
-//		System.out.println("Enter search term:");
-//		searchTerm = br.readLine();
+
 		
 		
 		
-		domain = "services.local";
-		username = "santana1.jonathan";
-		password = "*F20j40i60!";
-		choice = "santana1.jonathan@servicescobrancas.com.br";
+		domain = "**";
+		username = "***";
+		password = "***";
+		choice = "***";
 		String Empresa = "servicescobrancas";
 		searchTerm = "OU=Operadores,OU=Usuarios,OU=Operacional,OU=" + Empresa + ",DC=services,dc=local";
 				

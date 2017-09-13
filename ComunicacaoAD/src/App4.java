@@ -26,7 +26,7 @@ public class App4 {
 		
 		
 			String matricula = "santana1.jonathan";
-			String password = "*F20j40i60!";
+			String password = "";
 		
 		
 		  properties = new Properties();        
@@ -36,7 +36,7 @@ public class App4 {
 	        properties.put(Context.SECURITY_PRINCIPAL, "dc=services,dc=net,dc=br");
 	        properties.put(Context.SECURITY_AUTHENTICATION, "simple");
 	        
-	        System.out.println("--------------- >Obtendo informaÁıes LDAP");    
+	        System.out.println("--------------- >Obtendo informa√ß√µes LDAP");    
 	        
 //	        String securityPrincipal = "cn=" + matricula + "OU=Operadores,OU=Usuarios,OU=Operacional,OU= reavalservices ,DC=services,dc=loca";
 	        //initializing active directory LDAP connection
@@ -49,44 +49,10 @@ public class App4 {
 			}
 		
 	        
-//	    	String matricula = "santana1.jonathan";
-//			String password = "*F20j40i60!";
-//		
-//			// set the LDAP authentication method
-//		    String auth_method  = "simple";
-//		    // set the LDAP client Version
-//		    String ldap_version = "3";
-//		    // This is our LDAP Server's IP
-//		    String ldap_host    = "dc1.services.local";
-//		    // This is our LDAP Server's Port
-//		    String ldap_port    = "389";
-//		    // This is our access ID
-//		    String ldap_dn      =  matricula;
-//		   // This is our access PW
-//		    String ldap_pw      =  password;
-//		    // This is our base DN
-		    String base_dn      = "dc=services,dc=local";
-//
-//		    DirContext ctx      = null;
-//		    Hashtable env       = new Hashtable();
-//
-//		    // Here we store the returned LDAP object data
-//		    String dn           = "";
-//		    // This will hold the returned attribute list
-//		    Attributes attrs;
-//
-//		    env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
-//		    env.put(Context.PROVIDER_URL,"ldap://" + ldap_host + ":" + ldap_port);
-//		    env.put(Context.SECURITY_AUTHENTICATION, auth_method);
-//		    env.put(Context.SECURITY_PRINCIPAL, ldap_dn);
-//		    env.put(Context.SECURITY_CREDENTIALS, ldap_pw);
-//		    env.put("java.naming.ldap.version", ldap_version);
+
 
 		    try{
-//		      System.out.println("Connecting to host " + ldap_host + " at port " + ldap_port + "...");
-//		      System.out.println();
 
-//		      d = new InitialDirContext(env);
 		      System.out.println("LDAP authentication successful!");
 
 		      // Specify the attribute list to be returned
