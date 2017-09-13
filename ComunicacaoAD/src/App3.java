@@ -20,11 +20,11 @@ public static void main(String[] args) throws ClientProtocolException, IOExcepti
 
 	
 
-		String input = "{\"password\":\"santana1.jonathan\",\"*F20j40i60!\"}";
+		String input = "{\"password\":\"santana1.jonathan\",\"senha\"}";
 		DefaultHttpClient httpClient = new DefaultHttpClient();
 		HttpPost postRequest = new HttpPost("http://web5:93/token");
 		
-		StringEntity request = new StringEntity("grant_type=password&username=santana.jonathan&password=*F20j40i60!");
+		StringEntity request = new StringEntity("grant_type=password&username=santana.jonathan&password=senha");
 		request.setContentType("application/x-www-form-urlencoded");
 		postRequest.setEntity(request);
 		
