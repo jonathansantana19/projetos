@@ -21,8 +21,8 @@ public class App {
 		ambiente.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 		ambiente.put(Context.PROVIDER_URL, "ldap://services.local:389");
 		ambiente.put(Context.SECURITY_AUTHENTICATION, "simple");
-		ambiente.put(Context.SECURITY_PRINCIPAL, "Scripts");
-		ambiente.put(Context.SECURITY_CREDENTIALS, "qtB>zp&78*");
+		ambiente.put(Context.SECURITY_PRINCIPAL, "**");
+		ambiente.put(Context.SECURITY_CREDENTIALS, ***");
 		
 		
 		  try {
@@ -51,7 +51,7 @@ public class App {
 //        authEnv.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 //        authEnv.put(Context.PROVIDER_URL, "ldap://dc1.services.local:389");
 //        authEnv.put(Context.SECURITY_PRINCIPAL, "cn=service/santana1.jonathan,dc=services,dc=local");
-//        authEnv.put(Context.SECURITY_CREDENTIALS, "*F20j40i61!");
+//        authEnv.put(Context.SECURITY_CREDENTIALS, "***");
 //		
 //        try {
 //			DirContext authContext = new InitialDirContext(authEnv);
