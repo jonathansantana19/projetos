@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+
+<h:head>
+	<title>Login Sistema</title>
+
+	<link href="font-awesome-4.7.0/css/font-awesome.min.css"
+		rel="stylesheet" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+</h:head>
+
+<h:body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h1>Alterar Senha</h1>
+			</div>
+		</div>
+		<br/><br/><br/><br/><br/>
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-3">
+				<p class="text-center">Use o formulário abaixo para alterar sua senha.  Sua senha não pode ser igual ao seu nome de Usuário</p>
+				<h:form id="passwordForm">
+					<h:inputText  styleClass="input-lg form-control" name="password1" id="password1" placeholder="New Password"	autocomplete="off" />
+					<div class="row">
+						<div class="col-sm-6">
+							<span id="8char" class="glyphicon glyphicon-remove"
+								style="color: #FF0004;"></span>4 Caracteres<br/>
+						</div>
+					</div>
+					<h:inputText styleClass="input-lg form-control"	name="password2" id="password2" placeholder="Repeat Password" autocomplete="off" />
+					<div class="row">
+						<div class="col-sm-12">
+							<span id="pwmatch" class="glyphicon glyphicon-remove"
+								style="color: #FF0004;"></span> Senha Iguais
+						</div>
+					</div>
+					<h:commandButton styleClass="col-xs-12 btn btn-primary btn-load btn-lg"	data-loading-text="Changing Password..." 
+					value="Alterar Senha" />
+				</h:form>
+			</div>
+			<!--/col-sm-6-->
+		</div>
+		<!--/row-->
+	</div>
+
+</h:body>
+
+
+</html>
+
+
+

@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+
+<h:head>
+<title>Login Sistema</title>
+
+<link href="css/login.css" rel="stylesheet" />
+<link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+</h:head>
+
+<h:body>
+
+
+
+    <div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <h:form styleClass="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <h:inputText  id="inputEmail" class="form-control" placeholder="Usuario" required="true" />
+                <h:inputText id="inputPassword" class="form-control" placeholder="Contraseña" required="true" />
+                <h:commandButton styleClass="btn btn-lg btn-success btn-block btn-signin" value="Iniciar Sessão" />
+            </h:form><!-- /form -->
+            <a href="#" class="forgot-password">
+               Esqueceu sua senha?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+	
+
+    
+
+
+</h:body>	
+
+
+</html>
+
+
+
