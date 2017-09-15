@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="716.0" prefWidth="1259.0" stylesheets="@bootstrap3.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softwareacademia.CadastroFXMLController">
+   <children>
+      <TabPane prefHeight="716.0" prefWidth="1259.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Dados cadastrais">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1259.0">
+                     <children>
+                        <Button layoutX="38.0" layoutY="555.0" maxHeight="91.0" mnemonicParsing="false" prefHeight="91.0" prefWidth="397.0" text="SALVAR">
+                           <styleClass>
+                              <String fx:value="lg" />
+                              <String fx:value="success" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutX="465.0" layoutY="555.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="455.0" text="Limpar">
+                           <styleClass>
+                              <String fx:value="lg" />
+                              <String fx:value="warning" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="38.0" layoutY="108.0" prefHeight="27.0" prefWidth="140.0" text="Nome:" />
+                        <TextField layoutX="168.0" layoutY="101.0" prefHeight="41.0" prefWidth="381.0" />
+                        <DatePicker layoutX="168.0" layoutY="165.0" />
+                        <Label layoutX="14.0" layoutY="171.0" text="Data Nascimento" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Adicionais">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab text="Modalidades">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutX="51.0" layoutY="79.0" prefHeight="212.0" prefWidth="1121.0" styleClass="filler">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="#" />
+                            <TableColumn prefWidth="150.0" text="Codgigo" />
+                          </columns>
+                        </TableView>
+                        <ChoiceBox layoutX="318.0" layoutY="26.0" prefHeight="39.0" prefWidth="408.0" />
+                        <CheckBox layoutX="242.0" layoutY="369.0" mnemonicParsing="false" text="CheckBox" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Recebimento">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="78.0" layoutY="64.0" prefHeight="27.0" prefWidth="202.0" text="Nome" />
+                        <TextField layoutX="280.0" layoutY="58.0" prefHeight="41.0" prefWidth="614.0" />
+                        <TreeTableView layoutX="65.0" layoutY="133.0" prefHeight="200.0" prefWidth="832.0">
+                          <columns>
+                            <TreeTableColumn prefWidth="75.0" text="C1" />
+                            <TreeTableColumn prefWidth="75.0" text="C2" />
+                          </columns>
+                        </TreeTableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Atualizar ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
